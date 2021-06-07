@@ -1,0 +1,12 @@
+extends layouts/layout.pug
+
+block content 
+    p=movie.summary
+    
+    ul 
+        each genre in movie.genres
+            li=genre
+
+    a(href=`/movies/${movie.id}/edit`) Edit Movie &rarr; 
+    br
+    a(href=`/movies/${movie.id}/remove`) Remove Movie &rarr; 

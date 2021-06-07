@@ -1,0 +1,8 @@
+mixin each(movie)
+    h4 
+        a(href=`/movies/${movie.id}`)=movie.title
+        ul 
+            li Year: #{movie.year}
+            li Rating: #{movie.rating}/5
+            li=movie.genres
+        hr

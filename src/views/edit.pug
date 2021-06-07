@@ -1,0 +1,11 @@
+extends layouts/layout.pug
+
+block content 
+    h4 Change Movie Details 
+    form(method="POST")
+        input(type='text' placeholder='Title' name='title' required value=movie.title)
+        input(type='text' placeholder='Summary' name='summary' required value=movie.summary)
+        input(type='number' placeholder='Year' name='year' required value=movie.year)
+        input(type='number' placeholder='Rating' name='rating' required value=movie.rating)
+        input(type='text' placeholder='Genres(Separated by comma)' name='genres' required value=movie.genres.join())
+        input(type='submit' value='Edit')

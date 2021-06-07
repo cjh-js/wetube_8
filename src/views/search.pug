@@ -1,0 +1,10 @@
+extends layouts/layout.pug
+include mixins/each.pug
+
+block content 
+    form(method="GET")
+        input(type='text' placeholder='Search by Title' name='keyword' required)
+        input(type='submit' value='Search')
+
+    each movie in movies 
+        +each(movie)

@@ -1,0 +1,9 @@
+extends layouts/layout.pug
+include mixins/each
+
+block content
+    h1 All Movies Here!
+    each movie in movies 
+        +each(movie)
+    else 
+        li Sorry Nothing Found.
